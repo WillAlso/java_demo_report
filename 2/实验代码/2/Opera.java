@@ -1,16 +1,16 @@
-
 public class Opera {
     public static double opera(double a, char theta, double b){
+		Operation t = null;
         switch (theta){
             case '+':
-                return (new Addtion()).operation(a,b);
+                t = new Addtion();break;
             case '-':
-                return (new Subtraction()).operation(a,b);
+                t = new Subtraction();break;
             case '*':
-                return (new Multiplication()).operation(a,b);
+                t = new Multiplication();break;
             case '/':
-                return (new Division()).operation(a,b);
+                t = new Division();break;
         }
-        return 0;
+		return t.operation(a,b);
     }
 }
